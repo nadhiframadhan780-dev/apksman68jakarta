@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Profil - SMAN 68 Jakarta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="app-style.css">
+</head>
+<body>
+    <div class="status-bar"><span class="time" id="statusTime">09:41</span><span class="icons"><i class="fas fa-signal"></i> <i class="fas fa-wifi"></i> <i class="fas fa-battery-full"></i></span></div>
+
+    <header class="app-header">
+        <div class="header-left">
+            <a href="app-home.html" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+            <h1>Profil Sekolah</h1>
+        </div>
+    </header>
+
+    <div class="content-padded">
+        <!-- Logo + Nama -->
+        <div class="profile-hero">
+            <img src="https://upload.wikimedia.org/wikipedia/id/1/19/Logo_SMAN_68_Jakarta.png" alt="SMAN 68" class="profile-logo">
+            <h2>SMAN 68 Jakarta</h2>
+            <p>Disiplin • Kreasi • Prestasi</p>
+        </div>
+
+        <!-- Visi Misi -->
+        <div class="info-card-app">
+            <h4><i class="fas fa-eye"></i> Visi</h4>
+            <p>Menjadi sekolah unggul yang menghasilkan lulusan berkualitas, berkarakter, berakhlak mulia, dan mampu bersaing di tingkat nasional maupun internasional.</p>
+        </div>
+
+        <div class="info-card-app">
+            <h4><i class="fas fa-bullseye"></i> Misi</h4>
+            <ul>
+                <li>Menyelenggarakan proses pembelajaran yang efektif dan inovatif</li>
+                <li>Menanamkan nilai-nilai karakter</li>
+                <li>Mengembangkan budaya berprestasi</li>
+                <li>Mendorong pemanfaatan teknologi</li>
+                <li>Mewujudkan lingkungan sekolah bersih dan sehat</li>
+            </ul>
+        </div>
+
+        <!-- Kontak -->
+        <div class="info-card-app">
+            <h4><i class="fas fa-phone-alt"></i> Kontak</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Jl. Salemba Raya No. 18, Jakarta Pusat</p>
+            <p><i class="fas fa-phone"></i> (021) 3142929</p>
+            <p><i class="fas fa-envelope"></i> emailsman68@gmail.com</p>
+        </div>
+
+        <!-- Versi -->
+        <div class="version-info-app">
+            <p>Versi Aplikasi: 2.5.0</p>
+            <p>© 2026 SMAN 68 Jakarta</p>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="app-home.html" class="nav-item"><i class="fas fa-home"></i><span>Beranda</span></a>
+        <a href="app-berita.html" class="nav-item"><i class="fas fa-newspaper"></i><span>Berita</span></a>
+        <a href="app-layanan.html" class="nav-item"><i class="fas fa-th-large"></i><span>Layanan</span></a>
+        <a href="app-profil.html" class="nav-item active"><i class="fas fa-user"></i><span>Profil</span></a>
+    </nav>
+
+    <script>
+        function updateTime() {
+            document.getElementById('statusTime').textContent = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+        }
+        updateTime(); setInterval(updateTime, 60000);
+    </script>
+</body>
+</html>
