@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Layanan - SMAN 68 Jakarta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/id/1/19/Logo_SMAN_68_Jakarta.png">
+    <link rel="stylesheet" href="app-style.css">
+</head>
+<body>
+    <div class="status-bar"><span class="time" id="statusTime">09:41</span><span class="icons"><i class="fas fa-signal"></i> <i class="fas fa-wifi"></i> <i class="fas fa-battery-full"></i></span></div>
+
+    <header class="app-header">
+        <div class="header-left">
+            <a href="app-home.html" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+            <h1>Layanan</h1>
+        </div>
+    </header>
+
+    <div class="content-padded">
+        <h3 class="content-title"><i class="fas fa-user-graduate"></i> Portal Siswa</h3>
+        <div class="service-grid">
+            <a href="login-siswa-sman-68-jakarta.html" class="service-card">
+                <div class="service-icon green"><i class="fas fa-sign-in-alt"></i></div>
+                <h4>Login Siswa</h4>
+                <p>Masuk ke akun siswa</p>
+            </a>
+            <a href="daftar-siswa-sman-68.html" class="service-card">
+                <div class="service-icon blue"><i class="fas fa-user-plus"></i></div>
+                <h4>Daftar Siswa</h4>
+                <p>Buat akun baru</p>
+            </a>
+            <a href="absensi-siswa-68.html" class="service-card">
+                <div class="service-icon orange"><i class="fas fa-clipboard-check"></i></div>
+                <h4>Absensi Siswa</h4>
+                <p>Isi absensi harian</p>
+            </a>
+        </div>
+
+        <h3 class="content-title"><i class="fas fa-chalkboard-user"></i> Portal Guru</h3>
+        <div class="service-grid">
+            <a href="portal-guru.html" class="service-card">
+                <div class="service-icon red"><i class="fas fa-sign-in-alt"></i></div>
+                <h4>Login Guru</h4>
+                <p>Portal absensi guru</p>
+            </a>
+            <a href="setup-operator.html" class="service-card">
+                <div class="service-icon purple"><i class="fas fa-user-cog"></i></div>
+                <h4>Setup Operator</h4>
+                <p>Buat akun operator</p>
+            </a>
+            <a href="operator-siswa-guru.html" class="service-card">
+                <div class="service-icon teal"><i class="fas fa-users-cog"></i></div>
+                <h4>Operator Panel</h4>
+                <p>Kelola pendaftaran</p>
+            </a>
+        </div>
+
+        <h3 class="content-title"><i class="fas fa-school"></i> Pendaftaran</h3>
+        <div class="service-grid">
+            <a href="countdown-SPMB-2026-2027.html" class="service-card">
+                <div class="service-icon gold"><i class="fas fa-calendar-star"></i></div>
+                <h4>SPMB 2026/2027</h4>
+                <p>Pendaftaran siswa baru</p>
+            </a>
+            <a href="countdown-pendaftaran-murid-mutasi-sman-68-jakarta.html" class="service-card">
+                <div class="service-icon indigo"><i class="fas fa-exchange-alt"></i></div>
+                <h4>Murid Mutasi</h4>
+                <p>Pendaftaran pindahan</p>
+            </a>
+        </div>
+
+        <h3 class="content-title"><i class="fas fa-star"></i> Lainnya</h3>
+        <div class="service-grid">
+            <a href="virsch-68.html" class="service-card">
+                <div class="service-icon cyan"><i class="fas fa-trophy"></i></div>
+                <h4>VIRSCH 68</h4>
+                <p>Virtual school</p>
+            </a>
+            <a href="app-download.html" class="service-card">
+                <div class="service-icon pink"><i class="fas fa-download"></i></div>
+                <h4>Download App</h4>
+                <p>Bagikan aplikasi</p>
+            </a>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="app-home.html" class="nav-item"><i class="fas fa-home"></i><span>Beranda</span></a>
+        <a href="app-berita.html" class="nav-item"><i class="fas fa-newspaper"></i><span>Berita</span></a>
+        <a href="app-layanan.html" class="nav-item active"><i class="fas fa-th-large"></i><span>Layanan</span></a>
+        <a href="app-profil.html" class="nav-item"><i class="fas fa-user"></i><span>Profil</span></a>
+    </nav>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('statusTime').textContent = now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+        }
+        updateTime(); setInterval(updateTime, 60000);
+    </script>
+</body>
+</html>
