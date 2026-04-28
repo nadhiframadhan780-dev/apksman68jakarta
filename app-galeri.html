@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Galeri - SMAN 68 Jakarta</title>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/id/1/19/Logo_SMAN_68_Jakarta.png">
+    <link rel="stylesheet" href="app-style.css">
+</head>
+<body>
+    <div class="status-bar"><span class="time" id="statusTime"></span><span class="icons"><i class="fas fa-signal"></i> <i class="fas fa-wifi"></i> <i class="fas fa-battery-full"></i></span></div>
+    <header class="app-header">
+        <div class="header-left">
+            <a href="app-home.html" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+            <h1>Galeri Foto</h1>
+        </div>
+    </header>
+
+    <div class="content-padded">
+        <div class="gallery-grid-app" id="galleryGrid"></div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" style="display:none;">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img id="lightboxImg" src="" alt="">
+        <p id="lightboxCaption"></p>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="app-home.html" class="nav-item"><i class="fas fa-home"></i><span>Beranda</span></a>
+        <a href="app-berita.html" class="nav-item"><i class="fas fa-newspaper"></i><span>Berita</span></a>
+        <a href="app-layanan.html" class="nav-item active"><i class="fas fa-th-large"></i><span>Layanan</span></a>
+        <a href="app-profil.html" class="nav-item"><i class="fas fa-user"></i><span>Profil</span></a>
+    </nav>
+
+    <script src="app-script.js"></script>
+</body>
+</html>
