@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Kontak - SMAN 68 Jakarta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/id/1/19/Logo_SMAN_68_Jakarta.png">
+    <link rel="stylesheet" href="app-style.css">
+</head>
+<body>
+    <div class="status-bar"><span class="time" id="statusTime"></span><span class="icons"><i class="fas fa-signal"></i> <i class="fas fa-wifi"></i> <i class="fas fa-battery-full"></i></span></div>
+    <header class="app-header">
+        <div class="header-left">
+            <a href="app-home.html" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+            <h1>Hubungi Kami</h1>
+        </div>
+    </header>
+
+    <div class="content-padded">
+        <div class="map-container-app">
+            <iframe src="https://www.google.com/maps?q=Jl.+Salemba+Raya+No.18,+Jakarta+Pusat&output=embed" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div class="contact-list-app">
+            <a href="tel:0213142929" class="contact-card-app">
+                <div class="contact-icon-app green"><i class="fas fa-phone-alt"></i></div>
+                <div><h4>Telepon</h4><p>(021) 3142929</p></div>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            <a href="mailto:emailsman68@gmail.com" class="contact-card-app">
+                <div class="contact-icon-app blue"><i class="fas fa-envelope"></i></div>
+                <div><h4>Email</h4><p>emailsman68@gmail.com</p></div>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            <a href="https://maps.google.com/?q=Jl.+Salemba+Raya+No.18,+Jakarta+Pusat" class="contact-card-app">
+                <div class="contact-icon-app orange"><i class="fas fa-map-marker-alt"></i></div>
+                <div><h4>Alamat</h4><p>Jl. Salemba Raya No. 18, Jakarta Pusat</p></div>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+
+        <div class="contact-card-app" style="margin-top:15px;">
+            <div class="contact-icon-app purple"><i class="fas fa-clock"></i></div>
+            <div>
+                <h4>Jam Operasional</h4>
+                <p>Senin - Kamis: 07.00 - 16.00 WIB</p>
+                <p>Jumat: 07.00 - 16.30 WIB</p>
+                <p>Sabtu: 07.00 - 13.00 WIB</p>
+                <p>Minggu: Tutup</p>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="app-home.html" class="nav-item"><i class="fas fa-home"></i><span>Beranda</span></a>
+        <a href="app-berita.html" class="nav-item"><i class="fas fa-newspaper"></i><span>Berita</span></a>
+        <a href="app-layanan.html" class="nav-item active"><i class="fas fa-th-large"></i><span>Layanan</span></a>
+        <a href="app-profil.html" class="nav-item"><i class="fas fa-user"></i><span>Profil</span></a>
+    </nav>
+
+    <script>document.getElementById('statusTime').textContent = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });</script>
+</body>
+</html>
