@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Download - SMAN 68 Jakarta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/id/1/19/Logo_SMAN_68_Jakarta.png">
+    <link rel="stylesheet" href="app-style.css">
+</head>
+<body>
+    <div class="status-bar"><span class="time" id="statusTime"></span><span class="icons"><i class="fas fa-signal"></i> <i class="fas fa-wifi"></i> <i class="fas fa-battery-full"></i></span></div>
+    <header class="app-header">
+        <div class="header-left">
+            <a href="app-home.html" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+            <h1>Download Aplikasi</h1>
+        </div>
+    </header>
+
+    <div class="content-padded">
+        <div class="download-hero">
+            <img src="https://upload.wikimedia.org/wikipedia/id/1/19/Logo_SMAN_68_Jakarta.png" alt="SMAN 68" class="download-hero-logo">
+            <h2>SMAN 68 Jakarta</h2>
+            <p>Versi 2.5.0 • 7 MB</p>
+        </div>
+
+        <div class="download-grid-app">
+            <a href="https://github.com/USERNAME/REPO/raw/main/sman68.apk" class="download-card-app">
+                <div class="download-icon-app green"><i class="fab fa-android"></i></div>
+                <h4>Android (APK)</h4>
+                <p>Download langsung</p>
+                <span class="badge-app available">Tersedia</span>
+            </a>
+            <div class="download-card-app disabled">
+                <div class="download-icon-app gray"><i class="fab fa-apple"></i></div>
+                <h4>iOS</h4>
+                <p>Coming Soon</p>
+                <span class="badge-app coming">Segera</span>
+            </div>
+            <div class="download-card-app disabled">
+                <div class="download-icon-app gray"><i class="fab fa-windows"></i></div>
+                <h4>Windows</h4>
+                <p>Coming Soon</p>
+                <span class="badge-app coming">Segera</span>
+            </div>
+        </div>
+
+        <div class="info-card-app" style="margin-top:20px;">
+            <h4><i class="fas fa-star"></i> Keuntungan</h4>
+            <ul>
+                <li>Akses cepat tanpa buka browser</li>
+                <li>Notifikasi instan berita & agenda</li>
+                <li>Tampilan full screen</li>
+                <li>Auto update</li>
+                <li>Bebas iklan</li>
+            </ul>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="app-home.html" class="nav-item"><i class="fas fa-home"></i><span>Beranda</span></a>
+        <a href="app-berita.html" class="nav-item"><i class="fas fa-newspaper"></i><span>Berita</span></a>
+        <a href="app-layanan.html" class="nav-item active"><i class="fas fa-th-large"></i><span>Layanan</span></a>
+        <a href="app-profil.html" class="nav-item"><i class="fas fa-user"></i><span>Profil</span></a>
+    </nav>
+
+    <script>document.getElementById('statusTime').textContent = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });</script>
+</body>
+</html>
