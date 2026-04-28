@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>SMAN 68 Jakarta</title>
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/id/1/19/Logo_SMAN_68_Jakarta.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#006633">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <link rel="stylesheet" href="app-style.css">
+</head>
+<body>
+    <!-- Status Bar -->
+    <div class="status-bar">
+        <span class="time" id="statusTime">09:41</span>
+        <span class="icons"><i class="fas fa-signal"></i> <i class="fas fa-wifi"></i> <i class="fas fa-battery-full"></i></span>
+    </div>
+
+    <!-- Header -->
+    <header class="app-header">
+        <div class="header-left">
+            <img src="https://upload.wikimedia.org/wikipedia/id/1/19/Logo_SMAN_68_Jakarta.png" alt="SMAN 68" class="header-logo">
+            <div>
+                <h1>SMAN 68 Jakarta</h1>
+                <span>Disiplin • Kreasi • Prestasi</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="icon-btn" id="notifBtn"><i class="fas fa-bell"></i><span class="badge" id="notifBadge">0</span></button>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+        <div class="hero-text">
+            <h2 id="greeting">Selamat Datang</h2>
+            <p>di Aplikasi Resmi SMAN 68 Jakarta</p>
+        </div>
+        <div class="hero-stats">
+            <div class="hero-stat"><span class="stat-value">A</span><span class="stat-label">Akreditasi</span></div>
+            <div class="hero-stat"><span class="stat-value">96</span><span class="stat-label">Indeks</span></div>
+            <div class="hero-stat"><span class="stat-value">#10</span><span class="stat-label">Nasional</span></div>
+        </div>
+    </div>
+
+    <!-- Quick Menu -->
+    <div class="quick-menu">
+        <a href="app-berita.html" class="menu-item">
+            <div class="menu-icon green"><i class="fas fa-newspaper"></i></div><span>Berita</span>
+        </a>
+        <a href="app-agenda.html" class="menu-item">
+            <div class="menu-icon blue"><i class="fas fa-calendar-alt"></i></div><span>Agenda</span>
+        </a>
+        <a href="app-ptn.html" class="menu-item">
+            <div class="menu-icon orange"><i class="fas fa-graduation-cap"></i></div><span>PTN/PTLN</span>
+        </a>
+        <a href="app-galeri.html" class="menu-item">
+            <div class="menu-icon purple"><i class="fas fa-images"></i></div><span>Galeri</span>
+        </a>
+        <a href="login-siswa-sman-68-jakarta.html" class="menu-item">
+            <div class="menu-icon teal"><i class="fas fa-user-graduate"></i></div><span>Login Siswa</span>
+        </a>
+        <a href="portal-guru.html" class="menu-item">
+            <div class="menu-icon red"><i class="fas fa-chalkboard-user"></i></div><span>Portal Guru</span>
+        </a>
+        <a href="countdown-SPMB-2026-2027.html" class="menu-item">
+            <div class="menu-icon gold"><i class="fas fa-school"></i></div><span>SPMB 2026</span>
+        </a>
+        <a href="virsch-68.html" class="menu-item">
+            <div class="menu-icon indigo"><i class="fas fa-trophy"></i></div><span>VIRSCH 68</span>
+        </a>
+        <a href="app-kontak.html" class="menu-item">
+            <div class="menu-icon cyan"><i class="fas fa-phone-alt"></i></div><span>Kontak</span>
+        </a>
+        <a href="app-download.html" class="menu-item">
+            <div class="menu-icon pink"><i class="fas fa-download"></i></div><span>Download</span>
+        </a>
+    </div>
+
+    <!-- Berita Terbaru -->
+    <section class="section">
+        <div class="section-header">
+            <h3><i class="fas fa-newspaper"></i> Berita Terkini</h3>
+            <a href="app-berita.html" class="see-all">Lihat Semua <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="news-list" id="newsList"></div>
+    </section>
+
+    <!-- Agenda -->
+    <section class="section">
+        <div class="section-header">
+            <h3><i class="fas fa-calendar-alt"></i> Agenda</h3>
+            <a href="app-agenda.html" class="see-all">Lihat Semua <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="agenda-list" id="agendaList"></div>
+    </section>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="app-home.html" class="nav-item active"><i class="fas fa-home"></i><span>Beranda</span></a>
+        <a href="app-berita.html" class="nav-item"><i class="fas fa-newspaper"></i><span>Berita</span></a>
+        <a href="app-layanan.html" class="nav-item"><i class="fas fa-th-large"></i><span>Layanan</span></a>
+        <a href="app-profil.html" class="nav-item"><i class="fas fa-user"></i><span>Profil</span></a>
+    </nav>
+
+    <!-- FAB Chat -->
+    <button class="fab-chat" id="fabChat"><i class="fas fa-headset"></i></button>
+
+    <script src="app-script.js"></script>
+</body>
+</html>
